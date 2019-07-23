@@ -6,7 +6,7 @@ import (
   "github.com/grpc-ecosystem/grpc-gateway/runtime"
   "golang.org/x/net/context"
   "google.golang.org/grpc"
-	gw0 "tensorflow_serving/apis/"
+	gw0 "tensorflow_serving/apis"
 )
 
 type RegisterFromEndpoint func(context.Context, *runtime.ServeMux, string, []grpc.DialOption) error
@@ -37,6 +37,7 @@ func run() error {
   loadEndpoint(ctx, serverMux, "localhost:9090", "/v1/model/", gw0.RegisterModelServiceHandlerFromEndpoint)
 	loadEndpoint(ctx, serverMux, "localhost:9090", "/v1/session/", gw0.RegisterSessionServiceHandlerFromEndpoint)
 	loadEndpoint(ctx, serverMux, "localhost:9090", "/v1/prediction/", gw0.RegisterPredictionServiceHandlerFromEndpoint)
+	loadEndpoint(ctx, serverMux, "localhost:9090", "/v1/ir/", gw0.RegisterIRServiceHandlerFromEndpoint)
   // ADD ENDPOINTS HERE
 
   return http.ListenAndServe(":8080", serverMux)

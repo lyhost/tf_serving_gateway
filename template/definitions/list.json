@@ -1,0 +1,5 @@
+[
+    "/definitions/tensorflow_serving/apis/prediction_service.swagger.json",
+    "/definitions/tensorflow_serving/apis/session_service.swagger.json",
+    "/definitions/tensorflow_serving/apis/model_service.swagger.json"
+]
