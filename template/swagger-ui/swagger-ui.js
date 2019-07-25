@@ -6684,6 +6684,7 @@ var Operation = module.exports = function (parent, scheme, operationId, httpMeth
   this.basePath = parent.basePath || '/';
 
   // For deep studio:  parent path does not equal to 'definitions / help'
+  var base = new URL(parent.url).pathname.split('/')[1]
   if (base != 'help' && base != 'definitions' ) {
        this.basePath = '/' + base;
   }

@@ -4,7 +4,7 @@ PROTOC_FLAGS=-I tensorflow -I tensorflow_serving -I/usr/local/include -I. \
 DESTINATION_PATH=build
 STUBS_PATH=${DESTINATION_PATH}/stubs
 SWAGGER_PATH=${DESTINATION_PATH}/swagger-ui
-DEFINITIONS_PATH=${DESTINATION_PATH}/definitions
+DEFINITIONS_PATH=${SWAGGER_PATH}/definitions
 
 SED_OPTS="-i"
 
