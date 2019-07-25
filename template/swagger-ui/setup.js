@@ -77,7 +77,7 @@ $(function () {
     window.SwaggerTranslator.translate();
   }
 
-  $.getJSON("/definitions/list.json", function(definitionFiles) {
+  $.getJSON("definitions/list.json", function(definitionFiles) {
     definitionFiles = pathsort(definitionFiles);
     definitionFiles.forEach(appendDefinitionLink);
     loadJson(definitionFiles[0]);
