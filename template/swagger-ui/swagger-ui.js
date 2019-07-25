@@ -6682,6 +6682,8 @@ var Operation = module.exports = function (parent, scheme, operationId, httpMeth
   }
   this.authorizations = args.security;
   this.basePath = parent.basePath || '/';
+
+  // For deep studio:  parent path does not equal to 'definitions / help'
   if (base != 'help' && base != 'definitions' ) {
        this.basePath = '/' + base;
   }
